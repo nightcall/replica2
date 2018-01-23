@@ -60,3 +60,43 @@ nav {
 #home-page h3 {
   text-align: center;
 }
+
+/****** _POST INPUT ******/
+
+#post-input form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#post-input textarea {
+  width: 500px;
+  height: 130px;
+  border: 3px solid #e7e7e7;
+  border-radius: 5px;
+  resize: none;
+  padding: 10px;
+  font-family: Consolas;
+  font-size: 15px;
+}
+
+#post-input textarea:focus {
+  outline: none;
+}
+
+#post-input button {
+  font-size: 15px;
+  background-color: white;
+  border: 1px solid #51a1fa;
+  border-radius: 2px;
+  padding: 5px;
+  color: #51a1fa;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#post-input button:hover {
+  background-color: #51a1fa;
+  color: white;
+}

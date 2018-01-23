@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class HomePage extends React.Component {
+export default class PostList extends React.Component {
   constructor(props) {
     super(props);
   }
