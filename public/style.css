@@ -3,3 +3,60 @@
   padding: 0;
   font-family: Helvetica;
 }
+
+/****** _COLORS *******/
+/* BLUE = #51a1fa */
+
+/****** _NAV BAR ******/
+nav {
+  background-color: #51a1fa;
+  padding: 5px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#nav-left h3 a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+#nav-left input {
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 3px;
+  font-family: Consolas;
+}
+
+#nav-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#nav-right a {
+  color: white;
+  text-decoration: none;
+}
+
+/****** _HOME PAGE ******/
+
+#home-page {
+  margin: auto;
+  width: 500px;
+}
+
+#home-page h3 {
+  text-align: center;
+}

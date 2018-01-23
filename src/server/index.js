@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 import App from '../browser/components/App';
+import postRoutes from './routes/PostRoutes';
 
 const app = express();
 
@@ -13,10 +14,17 @@ app.disable('x-powered-by');
 
 app.use(express.static(__dirname + '/../../public'));
 
+/** ROUTES **/
+app.use(postRoutes);
+
 app.get('*', (req, res) => {
   const initialState = {
-    isLoggedIn: false,
-    username: 'Saraband'
+    isLoggedIn: true,
+    user: {
+      id: 0,
+      name: 'Sara Band',
+      username: 'saraband'
+    }
   };
 
   const context = {};
@@ -28,7 +36,7 @@ app.get('*', (req, res) => {
 
   res.setHeader('Content-Type', 'text/html');
   res.render('layout.pug', {
-    renderedHTML: html,
+    renderedHTML: '',
     initialState: `const initialState = ${JSON.stringify(initialState)};`
   });
 });
